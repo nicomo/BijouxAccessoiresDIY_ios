@@ -1,0 +1,12 @@
+
+.DS_Store
+
+*.xcscheme
+
+CordovaLib/CordovaLib.xcodeproj/xcuserdata/nicomo.xcuserdatad/xcschemes/xcschememanagement.plist
+
+NativeBook.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+
+NativeBook.xcodeproj/project.xcworkspace/xcuserdata/nicomo.xcuserdatad/UserInterfaceState.xcuserstate
+
+NativeBook.xcodeproj/xcuserdata/nicomo.xcuserdatad/xcschemes/xcschememanagement.plist
