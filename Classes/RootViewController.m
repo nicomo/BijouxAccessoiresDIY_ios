@@ -45,7 +45,7 @@ int current;
     [self.view addSubview:self.cdvViewController.view];
 
     // Top pull view
-    self.pullviewtop = [[UIView alloc] initWithFrame:CGRectMake(0, -80, 768, 80)];
+    self.pullviewtop = [[UIView alloc] initWithFrame:CGRectMake(0, -160, 768, 80)];
     self.pullviewtop.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.75];
     UIImageView* tapimgviewtop = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tap.png"]];
     tapimgviewtop.frame = CGRectMake(236, 20, 40, 40);
@@ -65,7 +65,7 @@ int current;
     [self.cdvViewController.webView addSubview:self.pullviewtop];
     
     // Bottom pull view
-    self.pullviewbottom = [[UIView alloc] initWithFrame:CGRectMake(0, self.cdvViewController.webView.scrollView.frame.size.height, 768, 80)];
+    self.pullviewbottom = [[UIView alloc] initWithFrame:CGRectMake(0, self.cdvViewController.webView.scrollView.frame.size.height + 80, 768, 80)];
     self.pullviewbottom.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
     self.pullviewbottom.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.75];
     UIImageView* tapimgviewbottom = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tap.png"]];
@@ -147,7 +147,7 @@ int current;
             self.triggeredtop = NO;
             [UIView animateWithDuration:0.15 animations:^{
                 CGRect fr = self.pullviewtop.frame;
-                fr.origin.y = -80;
+                fr.origin.y = -160;
                 self.pullviewtop.frame = fr;
             }];
         }
@@ -169,7 +169,7 @@ int current;
             self.triggeredbottom = NO;
             [UIView animateWithDuration:0.15 animations:^{
                 CGRect fr = self.pullviewbottom.frame;
-                fr.origin.y = frh;
+                fr.origin.y = frh + 80;
                 self.pullviewbottom.frame = fr;
             }];
         }
