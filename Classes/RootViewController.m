@@ -31,7 +31,7 @@ int current;
     
     // CordovaView
     self.cdvViewController = [CDVViewController new];
-    self.cdvViewController.view.frame = CGRectMake(0, 0, 778, 1004);
+    self.cdvViewController.view.frame = CGRectMake(0, 64, 778, 960);
     self.cdvViewController.view.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleLeftMargin;
     self.cdvViewController.view.backgroundColor = [UIColor colorWithRed:.44 green:.46 blue:.49 alpha:1];
     self.cdvViewController.view.layer.masksToBounds = NO;
@@ -46,6 +46,9 @@ int current;
         if ([view isKindOfClass:[UIImageView class]]) {
             view.hidden = YES;
         }
+    }
+    for (UIView *subview in self.cdvViewController.webView.subviews) {
+        subview.clipsToBounds = NO;
     }
     self.cdvViewController.webView.scrollView.delegate = self;
     [self.view addSubview:self.cdvViewController.view];

@@ -31,13 +31,14 @@ NSArray* chapters;
 {
     [super viewDidLoad];
 
-    self.tableView.frame = CGRectMake(0, 0, 256, 1004);
+    self.tableView.frame = CGRectMake(0, 0, 256, 1024);
     self.tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
     
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.showsVerticalScrollIndicator = NO;
     self.tableView.tableFooterView = [[[UIView alloc] init] autorelease];
     self.tableView.backgroundColor = [UIColor colorWithRed:.13 green:.13 blue:.13 alpha:1];
+    [self.tableView setContentInset:UIEdgeInsetsMake(64,0,0,0)];
 }
 
 - (void)didReceiveMemoryWarning
