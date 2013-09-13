@@ -34,10 +34,10 @@ NSArray* chapters;
     self.tableView.frame = CGRectMake(0, 0, 256, 1024);
     self.tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
     
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    //self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.showsVerticalScrollIndicator = NO;
     self.tableView.tableFooterView = [[[UIView alloc] init] autorelease];
-    self.tableView.backgroundColor = [UIColor colorWithRed:.13 green:.13 blue:.13 alpha:1];
+    //self.tableView.backgroundColor = [UIColor colorWithRed:.13 green:.13 blue:.13 alpha:1];
     [self.tableView setContentInset:UIEdgeInsetsMake(64,0,0,0)];
 }
 
@@ -55,7 +55,7 @@ NSArray* chapters;
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 40;
+    return 44;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -68,11 +68,7 @@ NSArray* chapters;
         cell = [[[UIMasterViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:MasterCellIdentifier] autorelease];
     }
 
-    if (indexPath.row == 0) {
-        cell.primaryLabel.text = [chapters.retain objectAtIndex:indexPath.row];
-    } else {
-        cell.primaryLabel.text = [[chapters.retain objectAtIndex:indexPath.row] uppercaseString];
-    }
+    cell.primaryLabel.text = [chapters.retain objectAtIndex:indexPath.row];
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
@@ -91,7 +87,7 @@ NSArray* chapters;
 
     [UIView animateWithDuration:0.35 animations:^{
         CGRect fr = root.activeview.frame;
-        fr.origin.y = 40*next;
+        fr.origin.y = 44*next;
         root.activeview.frame = fr;
         
         if (root.triggeredtop) {
@@ -127,7 +123,7 @@ NSArray* chapters;
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    [cell setBackgroundColor:[colors.retain objectAtIndex:indexPath.row]];
+    //[cell setBackgroundColor:[colors.retain objectAtIndex:indexPath.row]];
 }
 
 @end

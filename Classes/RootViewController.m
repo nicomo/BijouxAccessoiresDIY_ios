@@ -198,7 +198,7 @@ int current;
     
     [UIView animateWithDuration:0.35 animations:^{
         CGRect fr = self.activeview.frame;
-        fr.origin.y = 40*next;
+        fr.origin.y = 44*next;
         self.activeview.frame = fr;
         
         if (self.triggeredtop) {
