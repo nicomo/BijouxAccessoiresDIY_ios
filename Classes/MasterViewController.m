@@ -70,7 +70,7 @@ NSArray* chapters;
 
     cell.primaryLabel.text = [chapters.retain objectAtIndex:indexPath.row];
     
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    //cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     return cell;
 }

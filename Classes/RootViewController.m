@@ -96,9 +96,16 @@ int current;
     [self.cdvViewController.webView addSubview:self.burger];
     [self.cdvViewController.webView bringSubviewToFront:self.burger];
     
+    // Separator view
+    UIView *separatorview = [[UIView alloc] init];
+    separatorview.frame = CGRectMake(-1, 0, 1, 960);
+    separatorview.backgroundColor = [UIColor colorWithRed:.56 green:.56 blue:.58 alpha:1];
+    [self.cdvViewController.webView addSubview:separatorview];
+    [self.cdvViewController.webView bringSubviewToFront:separatorview];
+    
     // Active view
     self.activeview = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"active.png"]];
-    self.activeview.frame = CGRectMake(-40, 40*current, 40, 40);
+    self.activeview.frame = CGRectMake(-44, 44*current, 44, 44);
     [self.cdvViewController.webView addSubview:self.activeview];
     [self.cdvViewController.webView bringSubviewToFront:self.activeview];
     
