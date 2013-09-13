@@ -33,15 +33,6 @@ int current;
     self.cdvViewController = [CDVViewController new];
     self.cdvViewController.view.frame = CGRectMake(0, 64, 778, 960);
     self.cdvViewController.view.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleLeftMargin;
-    self.cdvViewController.view.backgroundColor = [UIColor colorWithRed:.44 green:.46 blue:.49 alpha:1];
-    self.cdvViewController.view.layer.masksToBounds = NO;
-    self.cdvViewController.view.layer.shadowOffset = CGSizeMake(0, 0);
-    self.cdvViewController.view.layer.shadowRadius = 10;
-    self.cdvViewController.view.layer.shadowOpacity = 0.5;
-    self.cdvViewController.view.layer.shouldRasterize = YES;
-    self.cdvViewController.view.layer.rasterizationScale = [UIScreen mainScreen].scale;
-    self.cdvViewController.view.layer.shadowPath = [UIBezierPath bezierPathWithRect:self.cdvViewController.view.bounds].CGPath;
-    self.cdvViewController.webView.backgroundColor = [UIColor clearColor];
     for (UIView *view in [[[self.cdvViewController.webView subviews] objectAtIndex:0] subviews]) {
         if ([view isKindOfClass:[UIImageView class]]) {
             view.hidden = YES;
@@ -121,7 +112,6 @@ int current;
     [self.pullviewbottom addGestureRecognizer:self.tapGRbottom];
     [self.tapGRbottom release];
     
-    self.view.backgroundColor = [UIColor colorWithRed:.44 green:.46 blue:.49 alpha:1];
     self.view.autoresizesSubviews = YES;
 
     self.triggeredtop = NO;
