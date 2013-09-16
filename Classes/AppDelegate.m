@@ -39,24 +39,6 @@ int current;
                 @"Et maintenant ?",
                 nil];
     
-    colors = [NSArray arrayWithObjects:
-              [UIColor clearColor],
-              [UIColor colorWithRed:.80 green:.00 blue:.47 alpha:1],
-              [UIColor colorWithRed:.00 green:.61 blue:.59 alpha:1],
-              [UIColor colorWithRed:.42 green:.39 blue:.25 alpha:1],
-              [UIColor colorWithRed:.83 green:.73 blue:.08 alpha:1],
-              [UIColor colorWithRed:.97 green:.11 blue:.37 alpha:1],
-              [UIColor colorWithRed:.44 green:.46 blue:.49 alpha:1],
-              [UIColor colorWithRed:.56 green:.79 blue:.93 alpha:1],
-              [UIColor colorWithRed:.21 green:.23 blue:.23 alpha:1],
-              [UIColor colorWithRed:.32 green:.51 blue:.62 alpha:1],
-              [UIColor colorWithRed:.94 green:.66 blue:.67 alpha:1],
-              [UIColor colorWithRed:.73 green:.72 blue:.37 alpha:1],
-              [UIColor colorWithRed:.93 green:.47 blue:.40 alpha:1],
-              [UIColor colorWithRed:.93 green:.77 blue:.12 alpha:1],
-              [UIColor colorWithRed:.09 green:.72 blue:.65 alpha:1],
-              nil];
-    
     current = 0;
     
     return YES;

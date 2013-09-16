@@ -8,7 +8,6 @@
 #import "MasterViewController.h"
 #import "RootViewController.h"
 #import "AppDelegate.h"
-#import "UIMasterViewCell.h"
 #import <QuartzCore/QuartzCore.h>
 NSArray* chapters;
 
@@ -34,11 +33,10 @@ NSArray* chapters;
     self.tableView.frame = CGRectMake(0, 0, 256, 1024);
     self.tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
     
-    //self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.showsVerticalScrollIndicator = NO;
     self.tableView.tableFooterView = [[[UIView alloc] init] autorelease];
-    //self.tableView.backgroundColor = [UIColor colorWithRed:.13 green:.13 blue:.13 alpha:1];
     [self.tableView setContentInset:UIEdgeInsetsMake(64,0,0,0)];
+    [self.tableView setSeparatorInset:UIEdgeInsetsZero];
 }
 
 - (void)didReceiveMemoryWarning
@@ -60,17 +58,15 @@ NSArray* chapters;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *MasterCellIdentifier = @"MasterCell";
-
-    UIMasterViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MasterCellIdentifier];
+    static NSString *CellIdentifier = @"Cell";
     
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UIMasterViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:MasterCellIdentifier] autorelease];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
 
-    cell.primaryLabel.text = [chapters.retain objectAtIndex:indexPath.row];
-    
-    //cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.textLabel.text = [chapters.retain objectAtIndex:indexPath.row];
+    //cell.imageView.image = [UIImage imageNamed:@"flower.png"];
     
     return cell;
 }
@@ -120,10 +116,6 @@ NSArray* chapters;
         if (next < [chapters count]-1) root.chapternamebottom.text = [chapters objectAtIndex:next+1];
         current = next;
     }];
-}
-
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    //[cell setBackgroundColor:[colors.retain objectAtIndex:indexPath.row]];
 }
 
 @end

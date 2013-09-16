@@ -39,10 +39,8 @@
 		20FDA46717E3271B006D63F7 /* burger@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20FDA46217E3271B006D63F7 /* burger@2x.png */; };
 		20FDA46C17E32755006D63F7 /* tap.png in Resources */ = {isa = PBXBuildFile; fileRef = 20FDA46817E32755006D63F7 /* tap.png */; };
 		20FDA46D17E32755006D63F7 /* tap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20FDA46917E32755006D63F7 /* tap@2x.png */; };
-		20FDA46E17E32755006D63F7 /* UIMasterViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20FDA46B17E32755006D63F7 /* UIMasterViewCell.m */; };
 		20FDA47317E32787006D63F7 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20FDA47217E32787006D63F7 /* RootViewController.m */; };
 		20FDA47717E327AF006D63F7 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20FDA47617E327AF006D63F7 /* MasterViewController.m */; };
-		20FDA47A17E327DB006D63F7 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20FDA47817E327DB006D63F7 /* RootViewController.xib */; };
 		20FDA47D17E327F7006D63F7 /* icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 20FDA47B17E327F7006D63F7 /* icon-72.png */; };
 		20FDA47E17E327F7006D63F7 /* icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20FDA47C17E327F7006D63F7 /* icon-72@2x.png */; };
 		20FDA48617E3280F006D63F7 /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 20FDA47F17E3280F006D63F7 /* Default-568h@2x~iphone.png */; };
@@ -104,8 +102,6 @@
 		20FDA46217E3271B006D63F7 /* burger@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "burger@2x.png"; path = "Classes/burger@2x.png"; sourceTree = SOURCE_ROOT; };
 		20FDA46817E32755006D63F7 /* tap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tap.png; path = Classes/tap.png; sourceTree = SOURCE_ROOT; };
 		20FDA46917E32755006D63F7 /* tap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tap@2x.png"; path = "Classes/tap@2x.png"; sourceTree = SOURCE_ROOT; };
-		20FDA46A17E32755006D63F7 /* UIMasterViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIMasterViewCell.h; path = Classes/UIMasterViewCell.h; sourceTree = SOURCE_ROOT; };
-		20FDA46B17E32755006D63F7 /* UIMasterViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIMasterViewCell.m; path = Classes/UIMasterViewCell.m; sourceTree = SOURCE_ROOT; };
 		20FDA46F17E32777006D63F7 /* Vdnbrcupyyaykuzyblvvwuiwntx.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Vdnbrcupyyaykuzyblvvwuiwntx.ttf; path = Classes/Vdnbrcupyyaykuzyblvvwuiwntx.ttf; sourceTree = SOURCE_ROOT; };
 		20FDA47017E32777006D63F7 /* Yrlxpowcjmaxlpvlfuedtlaekim.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Yrlxpowcjmaxlpvlfuedtlaekim.ttf; path = Classes/Yrlxpowcjmaxlpvlfuedtlaekim.ttf; sourceTree = SOURCE_ROOT; };
 		20FDA47117E32787006D63F7 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootViewController.h; path = Classes/RootViewController.h; sourceTree = SOURCE_ROOT; };
@@ -113,7 +109,6 @@
 		20FDA47417E32797006D63F7 /* Globals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Globals.h; path = Classes/Globals.h; sourceTree = SOURCE_ROOT; };
 		20FDA47517E327AF006D63F7 /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MasterViewController.h; path = Classes/MasterViewController.h; sourceTree = SOURCE_ROOT; };
 		20FDA47617E327AF006D63F7 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MasterViewController.m; path = Classes/MasterViewController.m; sourceTree = SOURCE_ROOT; };
-		20FDA47917E327DB006D63F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = Classes/en.lproj/RootViewController.xib; sourceTree = SOURCE_ROOT; };
 		20FDA47B17E327F7006D63F7 /* icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-72.png"; path = "Classes/icons/icon-72.png"; sourceTree = SOURCE_ROOT; };
 		20FDA47C17E327F7006D63F7 /* icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-72@2x.png"; path = "Classes/icons/icon-72@2x.png"; sourceTree = SOURCE_ROOT; };
 		20FDA47F17E3280F006D63F7 /* Default-568h@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x~iphone.png"; path = "Classes/splash/Default-568h@2x~iphone.png"; sourceTree = SOURCE_ROOT; };
@@ -205,7 +200,6 @@
 			children = (
 				20E98D0117A6A0EA0085D7CA /* icons */,
 				20E98CF217A69D950085D7CA /* splash */,
-				20FDA47817E327DB006D63F7 /* RootViewController.xib */,
 				20FDA47417E32797006D63F7 /* Globals.h */,
 				20FDA47117E32787006D63F7 /* RootViewController.h */,
 				20FDA47217E32787006D63F7 /* RootViewController.m */,
@@ -219,8 +213,6 @@
 				20FDA47617E327AF006D63F7 /* MasterViewController.m */,
 				20FDA46817E32755006D63F7 /* tap.png */,
 				20FDA46917E32755006D63F7 /* tap@2x.png */,
-				20FDA46A17E32755006D63F7 /* UIMasterViewCell.h */,
-				20FDA46B17E32755006D63F7 /* UIMasterViewCell.m */,
 				20FDA46F17E32777006D63F7 /* Vdnbrcupyyaykuzyblvvwuiwntx.ttf */,
 				20FDA47017E32777006D63F7 /* Yrlxpowcjmaxlpvlfuedtlaekim.ttf */,
 				2010FCE91797138B0092C107 /* Supporting Files */,
@@ -369,7 +361,6 @@
 				203A233A17E3301E005847FC /* iPad.storyboard in Resources */,
 				20FDA46D17E32755006D63F7 /* tap@2x.png in Resources */,
 				209CCCE117E3291B0058CC1E /* InfoPlist.strings in Resources */,
-				20FDA47A17E327DB006D63F7 /* RootViewController.xib in Resources */,
 				20FDA46717E3271B006D63F7 /* burger@2x.png in Resources */,
 				20FDA48617E3280F006D63F7 /* Default-568h@2x~iphone.png in Resources */,
 				20FDA46C17E32755006D63F7 /* tap.png in Resources */,
@@ -399,7 +390,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				207E959B17AAD38900F3CE06 /* AppAvailability.m in Sources */,
-				20FDA46E17E32755006D63F7 /* UIMasterViewCell.m in Sources */,
 				20FDA47317E32787006D63F7 /* RootViewController.m in Sources */,
 				20FDA47717E327AF006D63F7 /* MasterViewController.m in Sources */,
 				20FDA46517E3271B006D63F7 /* AppDelegate.m in Sources */,
@@ -417,14 +407,6 @@
 				209CCCE017E3291B0058CC1E /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		20FDA47817E327DB006D63F7 /* RootViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				20FDA47917E327DB006D63F7 /* en */,
-			);
-			name = RootViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
