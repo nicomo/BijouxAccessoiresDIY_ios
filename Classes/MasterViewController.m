@@ -66,7 +66,13 @@ NSArray* chapters;
     }
 
     cell.textLabel.text = [chapters.retain objectAtIndex:indexPath.row];
-    //cell.imageView.image = [UIImage imageNamed:@"flower.png"];
+    cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"icon-%i.png", indexPath.row]];
+    if (cell.imageView.image) {
+        cell.backgroundColor = [UIColor colorWithRed:.94 green:.94 blue:.96 alpha:1];
+    } else {
+        cell.imageView.image = [UIImage imageNamed:@"icon-blank.png"];
+        cell.backgroundColor = [UIColor whiteColor];
+    }
     
     return cell;
 }
