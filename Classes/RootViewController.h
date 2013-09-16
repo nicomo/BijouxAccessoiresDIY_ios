@@ -12,6 +12,7 @@
 @interface RootViewController : UIViewController
 @property (nonatomic, strong) MasterViewController* masterViewController;
 @property (nonatomic, strong) CDVViewController* cdvViewController;
+@property (nonatomic, strong) IBOutlet UIBarButtonItem* burger;
 @property (nonatomic, strong) UIView* pullviewtop;
 @property (nonatomic, strong) UIView* pullviewbottom;
 @property (nonatomic, readwrite, strong) UILabel* chapternametop;
@@ -20,4 +21,5 @@
 @property (nonatomic) BOOL triggeredbottom;
 @property (nonatomic) BOOL triggeredburger;
 @property (nonatomic) BOOL dragging;
+- (IBAction)burgerPushed:(id)sender;
 @end

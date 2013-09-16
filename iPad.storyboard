@@ -33,13 +33,25 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Bijoux &amp; accessoires DIY" id="nh9-hT-1nU"/>
+                    <navigationItem key="navigationItem" title="Bijoux &amp; accessoires DIY" id="nh9-hT-1nU">
+                        <barButtonItem key="leftBarButtonItem" image="burger.png" id="SFQ-nq-QAJ">
+                            <connections>
+                                <action selector="burgerPushed:" destination="YQn-Fd-Dj8" id="cka-g7-HlU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="burger" destination="SFQ-nq-QAJ" id="Kjg-ON-18f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QVP-ms-r2q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3690" y="1"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="burger.png" width="46.400001525878906" height="46.400001525878906"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="lightContent"/>
         <simulatedOrientationMetrics key="orientation"/>

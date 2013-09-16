@@ -10,14 +10,13 @@
 int current;
 
 @interface RootViewController () <UIScrollViewDelegate, UIGestureRecognizerDelegate>
-@property (nonatomic, strong) UIButton* burger;
 @property (nonatomic, readwrite, strong) UITapGestureRecognizer* tapGRtop;
 @property (nonatomic, readwrite, strong) UITapGestureRecognizer* tapGRbottom;
 @end
 
 @implementation RootViewController
 
-@synthesize masterViewController, cdvViewController, triggeredtop, triggeredbottom, triggeredburger;
+@synthesize masterViewController, cdvViewController, burger, triggeredtop, triggeredbottom, triggeredburger;
 
 - (void)viewDidLoad
 {
@@ -86,15 +85,7 @@ int current;
     [self.cdvViewController.webView addSubview:self.pullviewbottom];
     
     // Burger
-    self.burger = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self.burger setImage:[UIImage imageNamed:@"burger.png"] forState:UIControlStateNormal];
-    self.burger.frame = CGRectMake(0, 0, 75, 75);
-    if (UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation])){
-        self.burger.hidden = YES;
-    }
-    [self.burger addTarget:self action:@selector(burgerPushed:) forControlEvents:UIControlEventTouchUpInside];
-    [self.cdvViewController.webView addSubview:self.burger];
-    [self.cdvViewController.webView bringSubviewToFront:self.burger];
+    [self.burger setEnabled:UIInterfaceOrientationIsPortrait([[UIApplication sharedApplication] statusBarOrientation])];
     
     // Separator view
     UIView *separatorview = [[UIView alloc] init];
@@ -192,7 +183,7 @@ int current;
         if (self.triggeredtop) {
             self.triggeredtop = NO;
             CGRect fr = self.pullviewtop.frame;
-            fr.origin.y = -80;
+            fr.origin.y = -160;
             self.pullviewtop.frame = fr;
             [self.cdvViewController.webView.scrollView setContentOffset:CGPointMake(0, 0) animated:YES];
         }
@@ -200,7 +191,7 @@ int current;
         if (self.triggeredbottom) {
             self.triggeredbottom = NO;
             CGRect fr = self.pullviewbottom.frame;
-            fr.origin.y = self.cdvViewController.webView.scrollView.frame.size.height;
+            fr.origin.y = self.cdvViewController.webView.scrollView.frame.size.height + 80;
             self.pullviewbottom.frame = fr;
             [self.cdvViewController.webView.scrollView setContentOffset:CGPointMake(0, self.cdvViewController.webView.scrollView.contentOffset.y-80) animated:YES];
         }
@@ -227,14 +218,14 @@ int current;
             if (self.triggeredtop) {
                 self.triggeredtop = NO;
                 CGRect fr3 = self.pullviewtop.frame;
-                fr3.origin.y = -80;
+                fr3.origin.y = -160;
                 self.pullviewtop.frame = fr3;
                 [self.cdvViewController.webView.scrollView setContentOffset:CGPointMake(0, 0) animated:YES];
             }
             if (self.triggeredbottom) {
                 self.triggeredbottom = NO;
                 CGRect fr3 = self.pullviewbottom.frame;
-                fr3.origin.y = self.cdvViewController.webView.scrollView.frame.size.height;
+                fr3.origin.y = self.cdvViewController.webView.scrollView.frame.size.height + 80;
                 self.pullviewbottom.frame = fr3;
                 [self.cdvViewController.webView.scrollView setContentOffset:CGPointMake(0, self.cdvViewController.webView.scrollView.contentOffset.y-80) animated:YES];
             }
@@ -254,10 +245,10 @@ int current;
 {
     if (toOrientation == UIInterfaceOrientationPortrait ||
         toOrientation == UIInterfaceOrientationPortraitUpsideDown) {
-        [self.burger setHidden:NO];
+        [self.burger setEnabled:YES];
     } else if (toOrientation == UIInterfaceOrientationLandscapeLeft ||
         toOrientation == UIInterfaceOrientationLandscapeRight) {
-        [self.burger setHidden:YES];
+        [self.burger setEnabled:NO];
         if (self.triggeredburger) {
             self.cdvViewController.view.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleRightMargin;
             self.cdvViewController.webView.scrollView.userInteractionEnabled = YES;
@@ -270,13 +261,13 @@ int current;
         if (self.triggeredtop) {
             self.triggeredtop = NO;
             CGRect fr3 = self.pullviewtop.frame;
-            fr3.origin.y = -80;
+            fr3.origin.y = -160;
             self.pullviewtop.frame = fr3;
         }
         if (self.triggeredbottom) {
             self.triggeredbottom = NO;
             CGRect fr3 = self.pullviewbottom.frame;
-            fr3.origin.y = self.cdvViewController.webView.scrollView.frame.size.height;
+            fr3.origin.y = self.cdvViewController.webView.scrollView.frame.size.height + 80;
             self.pullviewbottom.frame = fr3;
         }
     }];
