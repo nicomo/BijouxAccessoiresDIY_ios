@@ -17,7 +17,7 @@ int current;
 
 @implementation RootViewController
 
-@synthesize masterViewController, cdvViewController, triggeredtop, triggeredbottom, triggeredburger, activeview;
+@synthesize masterViewController, cdvViewController, triggeredtop, triggeredbottom, triggeredburger;
 
 - (void)viewDidLoad
 {
@@ -102,12 +102,6 @@ int current;
     separatorview.backgroundColor = [UIColor colorWithRed:.56 green:.56 blue:.58 alpha:1];
     [self.cdvViewController.webView addSubview:separatorview];
     [self.cdvViewController.webView bringSubviewToFront:separatorview];
-    
-    // Active view
-    self.activeview = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"active.png"]];
-    self.activeview.frame = CGRectMake(-44, 44*current, 44, 44);
-    [self.cdvViewController.webView addSubview:self.activeview];
-    [self.cdvViewController.webView bringSubviewToFront:self.activeview];
     
     self.tapGRtop = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapOnPullView:)];
     self.tapGRtop.delegate = self;
@@ -194,9 +188,6 @@ int current;
     NSString* call = [NSString stringWithFormat:@"loadpage(%i, %i)", next, self.triggeredtop];
     
     [UIView animateWithDuration:0.35 animations:^{
-        CGRect fr = self.activeview.frame;
-        fr.origin.y = 44*next;
-        self.activeview.frame = fr;
         
         if (self.triggeredtop) {
             self.triggeredtop = NO;

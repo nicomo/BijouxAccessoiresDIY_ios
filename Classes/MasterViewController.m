@@ -88,9 +88,6 @@ NSArray* chapters;
     RootViewController* root = (RootViewController*) self.parentViewController;
 
     [UIView animateWithDuration:0.35 animations:^{
-        CGRect fr = root.activeview.frame;
-        fr.origin.y = 44*next;
-        root.activeview.frame = fr;
         
         if (root.triggeredtop) {
             root.triggeredtop = NO;

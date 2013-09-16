@@ -12,7 +12,6 @@
 @interface RootViewController : UIViewController
 @property (nonatomic, strong) MasterViewController* masterViewController;
 @property (nonatomic, strong) CDVViewController* cdvViewController;
-@property (nonatomic, strong) UIImageView* activeview;
 @property (nonatomic, strong) UIView* pullviewtop;
 @property (nonatomic, strong) UIView* pullviewbottom;
 @property (nonatomic, readwrite, strong) UILabel* chapternametop;
