@@ -36,6 +36,7 @@ NSArray* chapters;
     self.tableView.showsVerticalScrollIndicator = NO;
     self.tableView.tableFooterView = [[[UIView alloc] init] autorelease];
     [self.tableView setContentInset:UIEdgeInsetsMake(64,0,0,0)];
+    [self.tableView setContentOffset:CGPointMake(0.0f, -64)];
     [self.tableView setSeparatorInset:UIEdgeInsetsZero];
 }
 
