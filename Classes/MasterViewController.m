@@ -35,9 +35,12 @@ NSArray* chapters;
     
     self.tableView.showsVerticalScrollIndicator = NO;
     self.tableView.tableFooterView = [[[UIView alloc] init] autorelease];
-    [self.tableView setContentInset:UIEdgeInsetsMake(64,0,0,0)];
-    [self.tableView setContentOffset:CGPointMake(0.0f, -64)];
-    [self.tableView setSeparatorInset:UIEdgeInsetsZero];
+    
+    if (NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_6_1) {
+        [self.tableView setContentInset:UIEdgeInsetsMake(64,0,0,0)];
+        [self.tableView setContentOffset:CGPointMake(0.0f, -64)];
+        [self.tableView setSeparatorInset:UIEdgeInsetsZero];
+    }
 }
 
 - (void)didReceiveMemoryWarning

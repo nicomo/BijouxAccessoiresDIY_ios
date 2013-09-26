@@ -30,7 +30,11 @@ int current;
     
     // CordovaView
     self.cdvViewController = [CDVViewController new];
-    self.cdvViewController.view.frame = CGRectMake(0, 64, 778, 960);
+    if (NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_6_1) {
+        self.cdvViewController.view.frame = CGRectMake(0, 64, 778, 960);
+    } else {
+        self.cdvViewController.view.frame = CGRectMake(0, 0, 778, 1004);
+    }
     self.cdvViewController.view.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleLeftMargin;
     for (UIView *view in [[[self.cdvViewController.webView subviews] objectAtIndex:0] subviews]) {
         if ([view isKindOfClass:[UIImageView class]]) {
