@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2001C69017FC20D90027A06F /* SharePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 2001C68F17FC20D90027A06F /* SharePlugin.m */; };
 		200C5A4317E74A39007D8133 /* icon-blank.png in Resources */ = {isa = PBXBuildFile; fileRef = 200C5A2D17E74A39007D8133 /* icon-blank.png */; };
 		200C5A4417E74A39007D8133 /* icon-blank@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 200C5A2E17E74A39007D8133 /* icon-blank@2x.png */; };
 		200C5A5917E755BF007D8133 /* icon-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 200C5A4517E755BF007D8133 /* icon-3.png */; };
@@ -84,6 +85,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2001C68E17FC20D90027A06F /* SharePlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharePlugin.h; sourceTree = "<group>"; };
+		2001C68F17FC20D90027A06F /* SharePlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharePlugin.m; sourceTree = "<group>"; };
 		200C5A2D17E74A39007D8133 /* icon-blank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-blank.png"; sourceTree = "<group>"; };
 		200C5A2E17E74A39007D8133 /* icon-blank@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-blank@2x.png"; sourceTree = "<group>"; };
 		200C5A4517E755BF007D8133 /* icon-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-3.png"; sourceTree = "<group>"; };
@@ -339,6 +342,8 @@
 				207E959917AAD25500F3CE06 /* AppAvailability.m */,
 				20E98D0F17A6A4440085D7CA /* PinterestPlugin.h */,
 				20E98D1017A6A4440085D7CA /* PinterestPlugin.m */,
+				2001C68E17FC20D90027A06F /* SharePlugin.h */,
+				2001C68F17FC20D90027A06F /* SharePlugin.m */,
 			);
 			path = Plugins;
 			sourceTree = "<group>";
@@ -480,6 +485,7 @@
 			files = (
 				207E959B17AAD38900F3CE06 /* AppAvailability.m in Sources */,
 				20FDA47317E32787006D63F7 /* RootViewController.m in Sources */,
+				2001C69017FC20D90027A06F /* SharePlugin.m in Sources */,
 				20FDA47717E327AF006D63F7 /* MasterViewController.m in Sources */,
 				20FDA46517E3271B006D63F7 /* AppDelegate.m in Sources */,
 				209CCCE317E329270058CC1E /* main.m in Sources */,
