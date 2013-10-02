@@ -116,6 +116,9 @@
     <feature name="PinterestPlugin">
         <param name="ios-package" value="PinterestPlugin" />
     </feature>
+    <feature name="SharePlugin">
+        <param name="ios-package" value="SharePlugin" />
+    </feature>
     <!-- Deprecated plugins element. REmove in 3.0 -->
     <plugins></plugins>
 </widget>
