@@ -74,15 +74,35 @@ a {
 #page h2#h2_SG_3251 { background: url('assets/img/img_headings/SG_3251.jpg'); }
 #page h2#h2_SG_3224 { background: url('assets/img/img_headings/SG_3224.jpg'); }
 #page h2#h2_SG_4356 { background: url('assets/img/img_headings/SG_4356.jpg'); }
-#page h2#h2_2394R2 { background: url('assets/img/img_headings/2394R2.jpg'); }
-#page h2#h2_2521R1 { background: url('assets/img/img_headings/2521R1.jpg'); }
-#page h2#h2_1394R1 { background: url('assets/img/img_headings/1394R1.jpg'); }
-#page h2#h2_2492R1 { background: url('assets/img/img_headings/2492R1.jpg'); }
-#page h2#h2_0298R1 { background: url('assets/img/img_headings/0298R1.jpg'); }
-#page h2#h2_1198R1 { background: url('assets/img/img_headings/1198R1.jpg'); }
-#page h2#h2_1228R1 { background: url('assets/img/img_headings/1228R1.jpg'); }
-#page h2#h2_1202R1 { background: url('assets/img/img_headings/1202R1.jpg'); }
-#page h2#h2_2290R1 { background: url('assets/img/img_headings/2290R1.jpg'); }
+#page h2#h2_SG_3979 { background: url('assets/img/img_headings/SG_3979.jpg'); }
+#page h2#h2_SG_3498 { background: url('assets/img/img_headings/SG_3498.jpg'); }
+#page h2#h2_SG_4433 { background: url('assets/img/img_headings/SG_4433.jpg'); }
+#page h2#h2_SG_3923 { background: url('assets/img/img_headings/SG_3923.jpg'); }
+#page h2#h2_SG_4070 { background: url('assets/img/img_headings/SG_4070.jpg'); }
+#page h2#h2_SG_3796 { background: url('assets/img/img_headings/SG_3796.jpg'); }
+#page h2#h2_SG_3493 { background: url('assets/img/img_headings/SG_3493.jpg'); }
+#page h2#h2_SG_4346 { background: url('assets/img/img_headings/SG_4346.jpg'); }
+#page h2#h2_SG_4042 { background: url('assets/img/img_headings/SG_4042.jpg'); }
+#page h2#h2_SG_3449 { background: url('assets/img/img_headings/SG_3449.jpg'); }
+#page h2#h2_SG_3502 { background: url('assets/img/img_headings/SG_3502.jpg'); }
+#page h2#h2_SG_3295 { background: url('assets/img/img_headings/SG_3295.jpg'); }
+#page h2#h2_SG_4626 { background: url('assets/img/img_headings/SG_4626.jpg'); }
+#page h2#h2_SG_4635 { background: url('assets/img/img_headings/SG_4635.jpg'); }
+#page h2#h2_SG_4238 { background: url('assets/img/img_headings/SG_4238.jpg'); }
+#page h2#h2_SG_4425 { background: url('assets/img/img_headings/SG_4425.jpg'); }
+#page h2#h2_SG_4027 { background: url('assets/img/img_headings/SG_4027.jpg'); }
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* chapter bottom border */
 #page #chapter1>h2, #page #chapter11>h2, #page #chapter21>h2, #page #chapter31>h2 { border-bottom: 5px solid #ddcbcb; }
@@ -119,34 +139,34 @@ a {
 }
 
 /* use color of chapter nav in images color*/
-#page #chapter1, #page #chapter11, #page #chapter21, #page #chapter31 figure img {
+#page #chapter1 figure img, #page #chapter11 figure img, #page #chapter21 figure img, #page #chapter31 figure img {
   border-bottom: 5px solid rgba(221, 203, 203, 0.5);
 }
-#page #chapter2, #page #chapter12, #page #chapter22, #page #chapter32 figure img {
+#page #chapter2 figure img, #page #chapter12 figure img, #page #chapter22 figure img, #page #chapter32 figure img {
   border-bottom: 5px solid rgba(201, 112, 114, 0.5);
 }
-#page #chapter3, #page #chapter13, #page #chapter23 figure img {
+#page #chapter3 figure img, #page #chapter13 figure img, #page #chapter23 figure img, #page #chapter33 figure img {
   border-bottom: 5px solid rgba(189, 209, 172, 0.5);
 }
-#page #chapter4, #page #chapter14, #page #chapter24 figure img {
+#page #chapter4 figure img, #page #chapter14 figure img, #page #chapter24 figure img {
   border-bottom: 5px solid rgba(236, 214, 175, 0.5);
 }
-#page #chapter5, #page #chapter15, #page #chapter25 figure img {
+#page #chapter5 figure img, #page #chapter15 figure img, #page #chapter25 figure img {
   border-bottom: 5px solid rgba(168, 129, 122, 0.5);
 }
-#page #chapter6, #page #chapter16, #page #chapter26 figure img {
+#page #chapter6 figure img, #page #chapter16 figure img, #page #chapter26 figure img {
   border-bottom: 5px solid rgba(231, 163, 144, 0.5);
 }
-#page #chapter7, #page #chapter17, #page #chapter27 figure img {
+#page #chapter7 figure img, #page #chapter17 figure img, #page #chapter27 figure img {
   border-bottom: 5px solid rgba(190, 216, 215, 0.5);
 }
-#page #chapter8, #page #chapter18, #page #chapter28 figure img {
+#page #chapter8 figure img, #page #chapter18 figure img, #page #chapter28 figure img {
   border-bottom: 5px solid rgba(81, 81, 79, 0.5);
 }
-#page #chapter9, #page #chapter19, #page #chapter29 figure img {
+#page #chapter9 figure img, #page #chapter19 figure img, #page #chapter29 figure img {
   border-bottom: 5px solid rgba(86, 99, 115, 0.5);
 }
-#page #chapter10, #page #chapter20, #page #chapter30 figure img {
+#page #chapter10 figure img, #page #chapter20 figure img, #page #chapter30 figure img {
   border-bottom: 5px solid rgba(95, 184, 160, 0.5);
 }
 
