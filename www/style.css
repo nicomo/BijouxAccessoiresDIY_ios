@@ -91,6 +91,7 @@ a {
 #page h2#h2_SG_4238 { background: url('assets/img/img_headings/SG_4238.jpg'); }
 #page h2#h2_SG_4425 { background: url('assets/img/img_headings/SG_4425.jpg'); }
 #page h2#h2_SG_4027 { background: url('assets/img/img_headings/SG_4027.jpg'); }
+#page h2#h2_SG_4508 { background: url('assets/img/img_headings/SG_4508.jpg'); }
 #page h2#h2_SG_plage { background: url('assets/img/img_headings/SG_plage.jpg'); }
 #page h2#h2_SG_reunion { background: url('assets/img/img_headings/SG_reunion.jpg'); }
 #page h2#h2_SG_pailettes { background: url('assets/img/img_headings/SG_pailettes.jpg'); }
@@ -114,7 +115,8 @@ a {
 #page #chapter10>h2, #page #chapter20>h2, #page #chapter30>h2 { border-bottom: 5px solid #5fb8a0; }
 
 #page h3 {
-  color: #00a8a2;
+  color: #566373;
+  font-size: 0.9em;
 }
 
 #page h4 {
