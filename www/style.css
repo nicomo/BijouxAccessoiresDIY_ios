@@ -101,7 +101,8 @@ a {
 #page h2#h2_SG_indien { background: url('assets/img/img_headings/SG_indien.jpg'); }
 #page h2#h2_SG_concert { background: url('assets/img/img_headings/SG_concert.jpg'); }
 #page h2#h2_SG_gamers { background: url('assets/img/img_headings/SG_gamers.jpg'); }
-
+#page h2#h2_SG_deguisee { background: url('assets/img/img_headings/SG_deguisee.jpg'); }
+#page h2#h2_SG_diner { background: url('assets/img/img_headings/SG_diner.jpg'); }
 
 /* chapter bottom border */
 #page #chapter1>h2, #page #chapter11>h2, #page #chapter21>h2, #page #chapter31>h2 { border-bottom: 5px solid #ddcbcb; }
