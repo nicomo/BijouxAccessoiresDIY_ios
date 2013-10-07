@@ -40,7 +40,7 @@ int current;
                 @"Une visière foulard",
                 @"Dîner à deux",
                 @"Une pochette chic",
-                @"Un bijou de chaussure",
+                @"Bijoux de chaussures",
                 @"Soirée déguisée",
                 @"Un loup",
                 @"Une couronne",
