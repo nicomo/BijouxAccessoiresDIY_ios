@@ -47,6 +47,7 @@
 		2010FDC1179762230092C107 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2010FDC0179762230092C107 /* ImageIO.framework */; };
 		2010FDC3179762400092C107 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2010FDC2179762400092C107 /* AssetsLibrary.framework */; };
 		2010FDC5179763A10092C107 /* www in Resources */ = {isa = PBXBuildFile; fileRef = 2010FDC4179763A10092C107 /* www */; };
+		202E0F561802BCFD00D39496 /* GotoPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 202E0F551802BCFD00D39496 /* GotoPlugin.m */; };
 		203A233A17E3301E005847FC /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 209CCCE817E32E520058CC1E /* iPad.storyboard */; };
 		207E959B17AAD38900F3CE06 /* AppAvailability.m in Sources */ = {isa = PBXBuildFile; fileRef = 207E959917AAD25500F3CE06 /* AppAvailability.m */; };
 		209CCCDE17E328FF0058CC1E /* BijouxAccessoiresDIY-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 209CCCDC17E328FF0058CC1E /* BijouxAccessoiresDIY-Info.plist */; };
@@ -131,6 +132,8 @@
 		2010FDC0179762230092C107 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		2010FDC2179762400092C107 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		2010FDC4179763A10092C107 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
+		202E0F541802BCFD00D39496 /* GotoPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GotoPlugin.h; sourceTree = "<group>"; };
+		202E0F551802BCFD00D39496 /* GotoPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GotoPlugin.m; sourceTree = "<group>"; };
 		205B84F61798038500CC10E2 /* CordovaLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CordovaLib.xcodeproj; path = CordovaLib/CordovaLib.xcodeproj; sourceTree = "<group>"; };
 		207E959817AAD25500F3CE06 /* AppAvailability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppAvailability.h; sourceTree = "<group>"; };
 		207E959917AAD25500F3CE06 /* AppAvailability.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppAvailability.m; sourceTree = "<group>"; };
@@ -356,6 +359,8 @@
 				20E98D1017A6A4440085D7CA /* PinterestPlugin.m */,
 				2001C68E17FC20D90027A06F /* SharePlugin.h */,
 				2001C68F17FC20D90027A06F /* SharePlugin.m */,
+				202E0F541802BCFD00D39496 /* GotoPlugin.h */,
+				202E0F551802BCFD00D39496 /* GotoPlugin.m */,
 			);
 			path = Plugins;
 			sourceTree = "<group>";
@@ -506,6 +511,7 @@
 				20FDA46517E3271B006D63F7 /* AppDelegate.m in Sources */,
 				209CCCE317E329270058CC1E /* main.m in Sources */,
 				20E98D1117A6A4440085D7CA /* PinterestPlugin.m in Sources */,
+				202E0F561802BCFD00D39496 /* GotoPlugin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

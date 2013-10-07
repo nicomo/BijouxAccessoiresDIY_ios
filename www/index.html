@@ -11,6 +11,7 @@
     <script src="framework/js/cordova-2.7.0.js"></script>
     <script src="framework/js/PinterestPlugin.js"></script>
     <script src="framework/js/SharePlugin.js"></script>
+    <script src="framework/js/GotoPlugin.js"></script>
     <script src="framework/js/AppAvailability.js"></script>
     <script src="framework/js/jquery-1.8.3.min.js"></script>
     <script src="framework/js/jquery.css3caching.js"></script>
@@ -27,6 +28,7 @@
           popify();
           pinify();
           sharify();
+          gotofy();
           inappbrowserify();
           $(".slideshow").slideshow();
           if (scrolltobottom) {
@@ -89,8 +91,6 @@
                                                             window.open(alt, '_blank', 'location=no');
                                                          }
                                                          });
-                                  
-          
         });
 
         $('form').submit(function(e) {
@@ -107,6 +107,13 @@
                               src = src.replace('assets/img/img_standalone/', '');
                               src = src.replace('.jpg', '');
                               window.share.triggerActionSheet(src);
+                              });
+      }
+    
+      function gotofy() {
+        $('figure.goto').click(function() {
+                              var target = $(this).attr('target');
+                              window.gotoplugin.goto(target);
                               });
       }
 

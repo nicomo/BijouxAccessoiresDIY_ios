@@ -119,6 +119,9 @@
     <feature name="SharePlugin">
         <param name="ios-package" value="SharePlugin" />
     </feature>
+    <feature name="GotoPlugin">
+        <param name="ios-package" value="GotoPlugin" />
+    </feature>
     <!-- Deprecated plugins element. REmove in 3.0 -->
     <plugins></plugins>
 </widget>
