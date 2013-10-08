@@ -12,6 +12,8 @@ int current;
 @interface RootViewController () <UIScrollViewDelegate, UIGestureRecognizerDelegate>
 @property (nonatomic, readwrite, strong) UITapGestureRecognizer* tapGRtop;
 @property (nonatomic, readwrite, strong) UITapGestureRecognizer* tapGRbottom;
+@property (nonatomic, readwrite, strong) UISwipeGestureRecognizer *swipeGRleft;
+@property (nonatomic, readwrite, strong) UISwipeGestureRecognizer *swipeGRright;
 @end
 
 @implementation RootViewController
@@ -107,6 +109,14 @@ int current;
     self.tapGRbottom.delegate = self;
     [self.pullviewbottom addGestureRecognizer:self.tapGRbottom];
     [self.tapGRbottom release];
+    
+    self.swipeGRleft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipe:)];
+    self.swipeGRleft.direction = UISwipeGestureRecognizerDirectionLeft;
+    [self.view addGestureRecognizer:self.swipeGRleft];
+    
+    self.swipeGRright = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipe:)];
+    self.swipeGRright.direction = UISwipeGestureRecognizerDirectionRight;
+    [self.view addGestureRecognizer:self.swipeGRright];
     
     self.view.autoresizesSubviews = YES;
 
@@ -210,38 +220,58 @@ int current;
     }];
 }
 
+- (void)showMenu
+{
+    [UIView animateWithDuration:0.35 animations:^{
+        CGRect fr2 = self.cdvViewController.view.frame;
+        fr2.origin.x = 256;
+        self.cdvViewController.view.frame = fr2;
+        self.cdvViewController.webView.scrollView.userInteractionEnabled = NO;
+        self.triggeredburger = YES;
+        if (self.triggeredtop) {
+            self.triggeredtop = NO;
+            CGRect fr3 = self.pullviewtop.frame;
+            fr3.origin.y = -160;
+            self.pullviewtop.frame = fr3;
+            [self.cdvViewController.webView.scrollView setContentOffset:CGPointMake(0, 0) animated:YES];
+        }
+        if (self.triggeredbottom) {
+            self.triggeredbottom = NO;
+            CGRect fr3 = self.pullviewbottom.frame;
+            fr3.origin.y = self.cdvViewController.webView.scrollView.frame.size.height + 80;
+            self.pullviewbottom.frame = fr3;
+            [self.cdvViewController.webView.scrollView setContentOffset:CGPointMake(0, self.cdvViewController.webView.scrollView.contentOffset.y-80) animated:YES];
+        }
+    }];
+}
+
+- (void)hideMenu
+{
+    [UIView animateWithDuration:0.35 animations:^{
+        CGRect fr2 = self.cdvViewController.view.frame;
+        fr2.origin.x = 0;
+        self.cdvViewController.view.frame = fr2;
+        self.cdvViewController.webView.scrollView.userInteractionEnabled = YES;
+        self.triggeredburger = NO;
+    }];
+}
+
 - (void)burgerPushed:(id)sender
 {
     if (! self.triggeredburger) {
-        [UIView animateWithDuration:0.35 animations:^{
-            CGRect fr2 = self.cdvViewController.view.frame;
-            fr2.origin.x = 256;
-            self.cdvViewController.view.frame = fr2;
-            self.cdvViewController.webView.scrollView.userInteractionEnabled = NO;
-            self.triggeredburger = YES;
-            if (self.triggeredtop) {
-                self.triggeredtop = NO;
-                CGRect fr3 = self.pullviewtop.frame;
-                fr3.origin.y = -160;
-                self.pullviewtop.frame = fr3;
-                [self.cdvViewController.webView.scrollView setContentOffset:CGPointMake(0, 0) animated:YES];
-            }
-            if (self.triggeredbottom) {
-                self.triggeredbottom = NO;
-                CGRect fr3 = self.pullviewbottom.frame;
-                fr3.origin.y = self.cdvViewController.webView.scrollView.frame.size.height + 80;
-                self.pullviewbottom.frame = fr3;
-                [self.cdvViewController.webView.scrollView setContentOffset:CGPointMake(0, self.cdvViewController.webView.scrollView.contentOffset.y-80) animated:YES];
-            }
-        }];
+        [self showMenu];
     } else {
-        [UIView animateWithDuration:0.35 animations:^{
-            CGRect fr2 = self.cdvViewController.view.frame;
-            fr2.origin.x = 0;
-            self.cdvViewController.view.frame = fr2;
-            self.cdvViewController.webView.scrollView.userInteractionEnabled = YES;
-            self.triggeredburger = NO;
-        }];
+        [self hideMenu];
+    }
+}
+
+- (void)handleSwipe:(UISwipeGestureRecognizer *)recognizer {
+    if (self.burger.enabled) {
+        if (! self.triggeredburger && recognizer.direction == UISwipeGestureRecognizerDirectionRight) {
+            [self showMenu];
+        } else if (recognizer.direction == UISwipeGestureRecognizerDirectionLeft) {
+            [self hideMenu];
+        }
     }
 }
 

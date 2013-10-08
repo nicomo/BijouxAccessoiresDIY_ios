@@ -22,4 +22,6 @@
 @property (nonatomic) BOOL triggeredburger;
 @property (nonatomic) BOOL dragging;
 - (IBAction)burgerPushed:(id)sender;
+- (void)showMenu;
+- (void)hideMenu;
 @end
