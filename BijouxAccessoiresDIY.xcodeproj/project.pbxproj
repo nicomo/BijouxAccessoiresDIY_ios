@@ -409,6 +409,11 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Citronours media";
+				TargetAttributes = {
+					2010FCDE1797138B0092C107 = {
+						DevelopmentTeam = 4N3YQ362GF;
+					};
+				};
 			};
 			buildConfigurationList = 2010FCDA1797138B0092C107 /* Build configuration list for PBXProject "BijouxAccessoiresDIY" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -586,6 +591,8 @@
 		2010FD031797138B0092C107 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Pinterest.embeddedframework\"",
@@ -604,6 +611,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = BijouxAccessoiresDIY;
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 2;
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_TEMP_DIR)/../UninstalledProducts/include/**";
 				WRAPPER_EXTENSION = app;
@@ -613,7 +621,8 @@
 		2010FD041797138B0092C107 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Amelie Morin Fontaine (4ZT7N33974)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Pinterest.embeddedframework\"",
@@ -632,7 +641,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = BijouxAccessoiresDIY;
-				PROVISIONING_PROFILE = "94F15803-B7AE-4712-8CC7-E7E82142F6EC";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 2;
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_TEMP_DIR)/../UninstalledProducts/include/**";
 				WRAPPER_EXTENSION = app;
