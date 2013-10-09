@@ -18,12 +18,12 @@ a {
 /* Cover */
 
 #page header {
-  background: #5e8ce2;
+  background: #e592a8;
 }
 
 #page p.publisher {
   background: white;
-  color: #5e8ce2;
+  color: #4fa1db;
   font-weight: bold;
   text-align: center;
 }
@@ -32,7 +32,7 @@ a {
 }
 
 #page p.author {
-  background: #91c0c1;
+  background: #5fb8a0;
   color: white;
   font-weight: bold;
   font-size: 45px;
@@ -40,7 +40,7 @@ a {
 
 #page h1 {
   font-weight: bold;
-  background: #91c0c1;
+  background: #5fb8a0;
   color: white;
 }
 @media (width: 768px) { #page h1 { height: 250px; } #page .logo { height: 504px } }
