@@ -33,7 +33,7 @@ int current;
                 @"Un col amovible",
                 @"Une broche de col",
                 @"Soirée paillettes",
-                @"Un bibi voilette",
+                @"Un bibi à voilette",
                 @"Un nœud papillon",
                 @"Pique-nique",
                 @"Un jonc fleuri",
