@@ -71,6 +71,8 @@
 		37D585271802AA7900EEBCFB /* icon-1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37D585231802AA7900EEBCFB /* icon-1@2x.png */; };
 		37D585281802AA7900EEBCFB /* icon-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 37D585241802AA7900EEBCFB /* icon-2.png */; };
 		37D585291802AA7900EEBCFB /* icon-2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37D585251802AA7900EEBCFB /* icon-2@2x.png */; };
+		DF2D16F11806E3930062511F /* icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = DF2D16EF1806E3930062511F /* icon-76.png */; };
+		DF2D16F21806E3930062511F /* icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DF2D16F01806E3930062511F /* icon-76@2x.png */; };
 		DFF1E574180579A00064597D /* icon-0.png in Resources */ = {isa = PBXBuildFile; fileRef = DFF1E5721805799F0064597D /* icon-0.png */; };
 		DFF1E575180579A00064597D /* icon-0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DFF1E573180579A00064597D /* icon-0@2x.png */; };
 /* End PBXBuildFile section */
@@ -149,6 +151,8 @@
 		37D585231802AA7900EEBCFB /* icon-1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-1@2x.png"; sourceTree = "<group>"; };
 		37D585241802AA7900EEBCFB /* icon-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-2.png"; sourceTree = "<group>"; };
 		37D585251802AA7900EEBCFB /* icon-2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-2@2x.png"; sourceTree = "<group>"; };
+		DF2D16EF1806E3930062511F /* icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-76.png"; path = "Classes/icons/icon-76.png"; sourceTree = SOURCE_ROOT; };
+		DF2D16F01806E3930062511F /* icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-76@2x.png"; path = "Classes/icons/icon-76@2x.png"; sourceTree = SOURCE_ROOT; };
 		DFF1E5721805799F0064597D /* icon-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-0.png"; sourceTree = "<group>"; };
 		DFF1E573180579A00064597D /* icon-0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-0@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -314,6 +318,8 @@
 			children = (
 				20FDA47B17E327F7006D63F7 /* icon-72.png */,
 				20FDA47C17E327F7006D63F7 /* icon-72@2x.png */,
+				DF2D16EF1806E3930062511F /* icon-76.png */,
+				DF2D16F01806E3930062511F /* icon-76@2x.png */,
 			);
 			path = icons;
 			sourceTree = "<group>";
@@ -365,7 +371,7 @@
 				ORGANIZATIONNAME = "Citronours media";
 				TargetAttributes = {
 					2010FCDE1797138B0092C107 = {
-						DevelopmentTeam = ZE9XE938Z2;
+						DevelopmentTeam = 4N3YQ362GF;
 					};
 				};
 			};
@@ -411,6 +417,7 @@
 				2010FDC5179763A10092C107 /* www in Resources */,
 				DFF1E575180579A00064597D /* icon-0@2x.png in Resources */,
 				20FDA48B17E3280F006D63F7 /* Default@2x~iphone.png in Resources */,
+				DF2D16F11806E3930062511F /* icon-76.png in Resources */,
 				200C5A5E17E755BF007D8133 /* icon-9@2x.png in Resources */,
 				200C5A6A17E755BF007D8133 /* icon-27@2x.png in Resources */,
 				20FDA47D17E327F7006D63F7 /* icon-72.png in Resources */,
@@ -420,6 +427,7 @@
 				200C5A6C17E755BF007D8133 /* icon-30@2x.png in Resources */,
 				20FDA48917E3280F006D63F7 /* Default-Portrait@2x~ipad.png in Resources */,
 				200C5A6017E755BF007D8133 /* icon-12@2x.png in Resources */,
+				DF2D16F21806E3930062511F /* icon-76@2x.png in Resources */,
 				37D585261802AA7900EEBCFB /* icon-1.png in Resources */,
 				200C5A4417E74A39007D8133 /* icon-blank@2x.png in Resources */,
 				200C5A6217E755BF007D8133 /* icon-15@2x.png in Resources */,
