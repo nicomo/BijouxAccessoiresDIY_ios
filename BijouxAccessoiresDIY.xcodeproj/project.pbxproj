@@ -599,11 +599,13 @@
 		2010FD031797138B0092C107 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Pinterest.embeddedframework\"",
+					"\"$(BUILD_ROOT)/../IntermediateBuildFilesPath/UninstalledProducts\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Classes/BijouxAccessoiresDIY-Prefix.pch";
@@ -621,7 +623,7 @@
 				PRODUCT_NAME = BijouxAccessoiresDIY;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 2;
-				USER_HEADER_SEARCH_PATHS = "$(PROJECT_TEMP_DIR)/../UninstalledProducts/include/**";
+				USER_HEADER_SEARCH_PATHS = "\"$(PROJECT_TEMP_DIR)/../UninstalledProducts/include\"/** \"$(BUILD_ROOT)/../IntermediateBuildFilesPath/UninstalledProducts\"/** \"$(TARGET_BUILD_DIR)\"/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -629,11 +631,13 @@
 		2010FD041797138B0092C107 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Pinterest.embeddedframework\"",
+					"\"$(BUILD_ROOT)/../IntermediateBuildFilesPath/UninstalledProducts\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Classes/BijouxAccessoiresDIY-Prefix.pch";
@@ -641,6 +645,12 @@
 					"“$(BUILT_PRODUCTS_DIR)”",
 					"“$(OBJROOT)/UninstalledProducts/include”",
 					"“$(TARGET_BUILD_DIR)/usr/local/lib/include”",
+				);
+				"HEADER_SEARCH_PATHS[arch=*]" = (
+					"“$(BUILT_PRODUCTS_DIR)”",
+					"“$(OBJROOT)/UninstalledProducts/include”",
+					"“$(TARGET_BUILD_DIR)/usr/local/lib/include”",
+					"\"$(BUILD_ROOT)/../IntermediateBuildFilesPath/UninstalledProducts\"",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Classes/BijouxAccessoiresDIY-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
@@ -651,7 +661,7 @@
 				PRODUCT_NAME = BijouxAccessoiresDIY;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 2;
-				USER_HEADER_SEARCH_PATHS = "$(PROJECT_TEMP_DIR)/../UninstalledProducts/include/**";
+				USER_HEADER_SEARCH_PATHS = "\"$(PROJECT_TEMP_DIR)/../UninstalledProducts/include\"/** \"$(BUILD_ROOT)/../IntermediateBuildFilesPath/UninstalledProducts\"/** \"$(TARGET_BUILD_DIR)\"/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
