@@ -22,7 +22,6 @@
           pinify();
           sharify();
           gotofy();
-          inappbrowserify();
           $(".slideshow").slideshow();
           if (scrolltobottom) {
             $('body').scrollTop($('.wrap').outerHeight() - $(window).outerHeight());
@@ -63,29 +62,6 @@
                                     var descriptionText = $(this).parent().find('figcaption').html() || defaultText;
                                     window.location = "js-call:::composePin:::"+imageURL;
                                     });
-      }
-
-      function inappbrowserify() {
-        /*$('a[target^="_"]').click(function(e) {
-                                  e.preventDefault();
-                                  var url = $(this).attr("href");
-                                  var alt = $(this).attr("alt");
-                                  var target = $(this).attr("target");
-                                  window.appavailability(url, function(availability) {
-                                                         // availability is either true or false
-                                                         if(availability) {
-                                                            window.open(url, target, 'location=no');
-                                                         } else {
-                                                            window.open(alt, '_blank', 'location=no');
-                                                         }
-                                                         });
-        });*/
-
-        $('form').submit(function(e) {
-          e.preventDefault();
-          var url = $(this).attr('action') + '?' + $(this).serialize();
-          window.open(url, '_blank', 'location=no');
-        });
       }
     
       function sharify() {

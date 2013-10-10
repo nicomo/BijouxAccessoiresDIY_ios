@@ -334,6 +334,11 @@ int current;
 
         return NO;
     }
+    
+    if ( navigationType == UIWebViewNavigationTypeLinkClicked ) {
+        [[UIApplication sharedApplication] openURL:[request URL]];
+        return NO;
+    }
 
     return YES;
 }
