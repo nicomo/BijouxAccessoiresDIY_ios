@@ -58,7 +58,7 @@
         
         $('figure.pinterest').append('<button class="pinterest"></div>');
         $('button.pinterest').click(function() {
-                                    var imageURL = $(this).parent().find('img').attr('src').replace('assets/img/', baseURL);
+                                    var imageURL = $(this).parent().find('img').attr('src').replace('assets/img/img_standalone/', baseURL);
                                     var descriptionText = $(this).parent().find('figcaption').html() || defaultText;
                                     window.location = "js-call:::composePin:::"+imageURL;
                                     });

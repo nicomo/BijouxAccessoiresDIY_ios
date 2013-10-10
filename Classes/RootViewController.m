@@ -377,6 +377,7 @@ int current;
 - (void) composePin:(NSArray *)components {
     NSString* clientID = [@"1432309" retain];
     self.pinterest = [[Pinterest alloc] initWithClientId:clientID];
+    NSLog([components objectAtIndex:2]);
     [self.pinterest createPinWithImageURL:[NSURL URLWithString:[components objectAtIndex:2]]
                                 sourceURL:[NSURL URLWithString:@"http://www.citronours.fr"]
                               description:@"J'ai trouvé cette image dans un livre de citronours.fr"];
