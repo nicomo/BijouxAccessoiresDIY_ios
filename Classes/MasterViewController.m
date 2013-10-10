@@ -98,27 +98,27 @@ NSArray* chapters;
             CGRect fr = root.pullviewtop.frame;
             fr.origin.y = -80;
             root.pullviewtop.frame = fr;
-            [root.cdvViewController.webView.scrollView setContentOffset:CGPointMake(0, 0) animated:YES];
+            [root.webView.scrollView setContentOffset:CGPointMake(0, 0) animated:YES];
         }
         
         if (root.triggeredbottom) {
             root.triggeredbottom = NO;
             CGRect fr = root.pullviewbottom.frame;
-            fr.origin.y = root.cdvViewController.webView.scrollView.frame.size.height;
+            fr.origin.y = root.webView.scrollView.frame.size.height;
             root.pullviewbottom.frame = fr;
-            [root.cdvViewController.webView.scrollView setContentOffset:CGPointMake(0, root.cdvViewController.webView.scrollView.contentOffset.y-80) animated:YES];
+            [root.webView.scrollView setContentOffset:CGPointMake(0, root.webView.scrollView.contentOffset.y-80) animated:YES];
         }
         
         if (root.triggeredburger) {
-            CGRect fr2 = root.cdvViewController.view.frame;
+            CGRect fr2 = root.webView.frame;
             fr2.origin.x = 0;
-            root.cdvViewController.view.frame = fr2;
-            root.cdvViewController.webView.scrollView.userInteractionEnabled = YES;
+            root.webView.frame = fr2;
+            root.webView.scrollView.userInteractionEnabled = YES;
             root.triggeredburger = NO;
         }
 
     } completion:^(BOOL finished){
-        [root.cdvViewController.webView stringByEvaluatingJavaScriptFromString:call];
+        [root.webView stringByEvaluatingJavaScriptFromString:call];
         if (next > 0) root.chapternametop.text = [chapters objectAtIndex:next-1];
         if (next < [chapters count]-1) root.chapternamebottom.text = [chapters objectAtIndex:next+1];
         current = next;

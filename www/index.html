@@ -4,18 +4,11 @@
     <meta charset="utf-8">
     <title>Sarah Gontard. Bijoux &amp; accessoires DIY.</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--<link href="framework/css/bootstrap.min.css" rel="stylesheet" media="screen">-->
     <link href="framework/css/font-awesome.min.css" rel="stylesheet">
     <link href="framework/css/framework.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
-    <script src="framework/js/cordova-2.7.0.js"></script>
-    <script src="framework/js/PinterestPlugin.js"></script>
-    <script src="framework/js/SharePlugin.js"></script>
-    <script src="framework/js/GotoPlugin.js"></script>
-    <script src="framework/js/AppAvailability.js"></script>
     <script src="framework/js/jquery-1.8.3.min.js"></script>
     <script src="framework/js/jquery.css3caching.js"></script>
-    <!--<script src="framework/js/bootstrap.min.js"></script>-->
     <script src="framework/js/jquery.transit.min.js"></script>
     <script src="framework/js/jquery.touchSwipe.min.js"></script>
     <script src="framework/js/jquery.slideshow.js"></script>
@@ -60,25 +53,20 @@
       }
 
       function pinify() {
-        var clientID = "1432309";
+        
         var baseURL = "http://pinterest.citronours.s3-website-us-east-1.amazonaws.com/";
-        var sourceURL = "http://www.citronours.fr";
         var defaultText = "J'ai trouvé cette image dans un livre de citronours.fr"
-        window.pinterest.initPin(clientID);
-        window.pinterest.canPin(function(result) {
-          if (result) {
-            $('figure.pinterest').append('<button class="pinterest"></div>');
-            $('button.pinterest').click(function() {
-              var imageURL = $(this).parent().find('img').attr('src').replace('assets/img/', baseURL);
-              var descriptionText = $(this).parent().find('figcaption').html() || defaultText;
-              window.pinterest.composePin(imageURL, sourceURL, descriptionText);
-            });
-          }
-        });
+        
+        $('figure.pinterest').append('<button class="pinterest"></div>');
+        $('button.pinterest').click(function() {
+                                    var imageURL = $(this).parent().find('img').attr('src').replace('assets/img/', baseURL);
+                                    var descriptionText = $(this).parent().find('figcaption').html() || defaultText;
+                                    window.location = "js-call:::composePin:::"+imageURL;
+                                    });
       }
 
       function inappbrowserify() {
-        $('a[target^="_"]').click(function(e) {
+        /*$('a[target^="_"]').click(function(e) {
                                   e.preventDefault();
                                   var url = $(this).attr("href");
                                   var alt = $(this).attr("alt");
@@ -91,7 +79,7 @@
                                                             window.open(alt, '_blank', 'location=no');
                                                          }
                                                          });
-        });
+        });*/
 
         $('form').submit(function(e) {
           e.preventDefault();
@@ -106,14 +94,14 @@
                               var src = $(this).parent().find('img').attr('src');
                               src = src.replace('assets/img/img_standalone/', '');
                               src = src.replace('.jpg', '');
-                              window.share.triggerActionSheet(src);
+                              window.location = "js-call:::share:::"+src;
                               });
       }
     
       function gotofy() {
         $('figure.goto').click(function() {
                               var target = $(this).attr('target');
-                              window.gotoplugin.goto(target);
+                              window.location = "js-call:::goTo:::"+target;
                               });
       }
 

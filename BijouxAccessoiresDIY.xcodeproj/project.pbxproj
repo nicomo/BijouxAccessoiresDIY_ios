@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2001C69017FC20D90027A06F /* SharePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 2001C68F17FC20D90027A06F /* SharePlugin.m */; };
 		200C5A4317E74A39007D8133 /* icon-blank.png in Resources */ = {isa = PBXBuildFile; fileRef = 200C5A2D17E74A39007D8133 /* icon-blank.png */; };
 		200C5A4417E74A39007D8133 /* icon-blank@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 200C5A2E17E74A39007D8133 /* icon-blank@2x.png */; };
 		200C5A5917E755BF007D8133 /* icon-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 200C5A4517E755BF007D8133 /* icon-3.png */; };
@@ -43,16 +42,12 @@
 		2010FD2F17975E9D0092C107 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2010FD2E17975E9D0092C107 /* SystemConfiguration.framework */; };
 		2010FD3117975EA60092C107 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2010FD3017975EA60092C107 /* MobileCoreServices.framework */; };
 		2010FD3317975EB10092C107 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2010FD3217975EB10092C107 /* CoreMedia.framework */; };
-		2010FD3517975ED90092C107 /* libCordova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2010FD3417975ED90092C107 /* libCordova.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		2010FDC1179762230092C107 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2010FDC0179762230092C107 /* ImageIO.framework */; };
 		2010FDC3179762400092C107 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2010FDC2179762400092C107 /* AssetsLibrary.framework */; };
 		2010FDC5179763A10092C107 /* www in Resources */ = {isa = PBXBuildFile; fileRef = 2010FDC4179763A10092C107 /* www */; };
-		202E0F561802BCFD00D39496 /* GotoPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 202E0F551802BCFD00D39496 /* GotoPlugin.m */; };
 		203A233A17E3301E005847FC /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 209CCCE817E32E520058CC1E /* iPad.storyboard */; };
-		207E959B17AAD38900F3CE06 /* AppAvailability.m in Sources */ = {isa = PBXBuildFile; fileRef = 207E959917AAD25500F3CE06 /* AppAvailability.m */; };
 		209CCCE117E3291B0058CC1E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 209CCCDF17E3291B0058CC1E /* InfoPlist.strings */; };
 		209CCCE317E329270058CC1E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 209CCCE217E329270058CC1E /* main.m */; };
-		20E98D1117A6A4440085D7CA /* PinterestPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 20E98D1017A6A4440085D7CA /* PinterestPlugin.m */; };
 		20E98D1617A6A4EE0085D7CA /* Pinterest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20E98D1317A6A4EE0085D7CA /* Pinterest.framework */; };
 		20E98D1717A6A4EE0085D7CA /* PinterestSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 20E98D1517A6A4EE0085D7CA /* PinterestSDKResources.bundle */; };
 		20FDA46517E3271B006D63F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 20FDA46017E3271B006D63F7 /* AppDelegate.m */; };
@@ -80,19 +75,7 @@
 		DFF1E575180579A00064597D /* icon-0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DFF1E573180579A00064597D /* icon-0@2x.png */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		205B84FA1798038500CC10E2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 205B84F61798038500CC10E2 /* CordovaLib.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 68A32D7114102E1C006B237C;
-			remoteInfo = CordovaLib;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		2001C68E17FC20D90027A06F /* SharePlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharePlugin.h; sourceTree = "<group>"; };
-		2001C68F17FC20D90027A06F /* SharePlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharePlugin.m; sourceTree = "<group>"; };
 		200C5A2D17E74A39007D8133 /* icon-blank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-blank.png"; sourceTree = "<group>"; };
 		200C5A2E17E74A39007D8133 /* icon-blank@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-blank@2x.png"; sourceTree = "<group>"; };
 		200C5A4517E755BF007D8133 /* icon-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-3.png"; sourceTree = "<group>"; };
@@ -129,22 +112,14 @@
 		2010FD2E17975E9D0092C107 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		2010FD3017975EA60092C107 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		2010FD3217975EB10092C107 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		2010FD3417975ED90092C107 /* libCordova.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libCordova.a; path = "CordovaLib/build/Release-iphoneos/libCordova.a"; sourceTree = "<group>"; };
 		2010FDC0179762230092C107 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		2010FDC2179762400092C107 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		2010FDC4179763A10092C107 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
-		202E0F541802BCFD00D39496 /* GotoPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GotoPlugin.h; sourceTree = "<group>"; };
-		202E0F551802BCFD00D39496 /* GotoPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GotoPlugin.m; sourceTree = "<group>"; };
-		205B84F61798038500CC10E2 /* CordovaLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CordovaLib.xcodeproj; path = CordovaLib/CordovaLib.xcodeproj; sourceTree = "<group>"; };
-		207E959817AAD25500F3CE06 /* AppAvailability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppAvailability.h; sourceTree = "<group>"; };
-		207E959917AAD25500F3CE06 /* AppAvailability.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppAvailability.m; sourceTree = "<group>"; };
 		209CCCDC17E328FF0058CC1E /* BijouxAccessoiresDIY-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "BijouxAccessoiresDIY-Info.plist"; path = "Classes/BijouxAccessoiresDIY-Info.plist"; sourceTree = SOURCE_ROOT; };
 		209CCCDD17E328FF0058CC1E /* BijouxAccessoiresDIY-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "BijouxAccessoiresDIY-Prefix.pch"; path = "Classes/BijouxAccessoiresDIY-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		209CCCE017E3291B0058CC1E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Classes/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
 		209CCCE217E329270058CC1E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Classes/main.m; sourceTree = SOURCE_ROOT; };
 		209CCCE817E32E520058CC1E /* iPad.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = iPad.storyboard; sourceTree = "<group>"; };
-		20E98D0F17A6A4440085D7CA /* PinterestPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinterestPlugin.h; sourceTree = "<group>"; };
-		20E98D1017A6A4440085D7CA /* PinterestPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinterestPlugin.m; sourceTree = "<group>"; };
 		20E98D1317A6A4EE0085D7CA /* Pinterest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pinterest.framework; sourceTree = "<group>"; };
 		20E98D1517A6A4EE0085D7CA /* PinterestSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PinterestSDKResources.bundle; sourceTree = "<group>"; };
 		20FDA45F17E3271B006D63F7 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = SOURCE_ROOT; };
@@ -183,7 +158,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2010FD3517975ED90092C107 /* libCordova.a in Frameworks */,
 				2010FDC3179762400092C107 /* AssetsLibrary.framework in Frameworks */,
 				2010FDC1179762230092C107 /* ImageIO.framework in Frameworks */,
 				2010FD3317975EB10092C107 /* CoreMedia.framework in Frameworks */,
@@ -246,12 +220,9 @@
 			isa = PBXGroup;
 			children = (
 				209CCCE817E32E520058CC1E /* iPad.storyboard */,
-				205B84F61798038500CC10E2 /* CordovaLib.xcodeproj */,
 				20FDA48D17E32835006D63F7 /* config.xml */,
 				2010FDC4179763A10092C107 /* www */,
 				20E98D1217A6A4EE0085D7CA /* Pinterest.embeddedframework */,
-				20E98D0E17A6A4440085D7CA /* Plugins */,
-				2010FD3417975ED90092C107 /* libCordova.a */,
 				2010FCE81797138B0092C107 /* Classes */,
 				2010FCE11797138B0092C107 /* Frameworks */,
 				2010FCE01797138B0092C107 /* Products */,
@@ -324,14 +295,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		205B84F71798038500CC10E2 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				205B84FB1798038500CC10E2 /* libCordova.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		20E98CF217A69D950085D7CA /* splash */ = {
 			isa = PBXGroup;
 			children = (
@@ -353,21 +316,6 @@
 				20FDA47C17E327F7006D63F7 /* icon-72@2x.png */,
 			);
 			path = icons;
-			sourceTree = "<group>";
-		};
-		20E98D0E17A6A4440085D7CA /* Plugins */ = {
-			isa = PBXGroup;
-			children = (
-				207E959817AAD25500F3CE06 /* AppAvailability.h */,
-				207E959917AAD25500F3CE06 /* AppAvailability.m */,
-				20E98D0F17A6A4440085D7CA /* PinterestPlugin.h */,
-				20E98D1017A6A4440085D7CA /* PinterestPlugin.m */,
-				2001C68E17FC20D90027A06F /* SharePlugin.h */,
-				2001C68F17FC20D90027A06F /* SharePlugin.m */,
-				202E0F541802BCFD00D39496 /* GotoPlugin.h */,
-				202E0F551802BCFD00D39496 /* GotoPlugin.m */,
-			);
-			path = Plugins;
 			sourceTree = "<group>";
 		};
 		20E98D1217A6A4EE0085D7CA /* Pinterest.embeddedframework */ = {
@@ -417,7 +365,7 @@
 				ORGANIZATIONNAME = "Citronours media";
 				TargetAttributes = {
 					2010FCDE1797138B0092C107 = {
-						DevelopmentTeam = 4N3YQ362GF;
+						DevelopmentTeam = ZE9XE938Z2;
 					};
 				};
 			};
@@ -431,28 +379,12 @@
 			mainGroup = 2010FCD61797138B0092C107;
 			productRefGroup = 2010FCE01797138B0092C107 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 205B84F71798038500CC10E2 /* Products */;
-					ProjectRef = 205B84F61798038500CC10E2 /* CordovaLib.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				2010FCDE1797138B0092C107 /* BijouxAccessoiresDIY */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		205B84FB1798038500CC10E2 /* libCordova.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libCordova.a;
-			remoteRef = 205B84FA1798038500CC10E2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		2010FCDD1797138B0092C107 /* Resources */ = {
@@ -515,14 +447,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				207E959B17AAD38900F3CE06 /* AppAvailability.m in Sources */,
 				20FDA47317E32787006D63F7 /* RootViewController.m in Sources */,
-				2001C69017FC20D90027A06F /* SharePlugin.m in Sources */,
 				20FDA47717E327AF006D63F7 /* MasterViewController.m in Sources */,
 				20FDA46517E3271B006D63F7 /* AppDelegate.m in Sources */,
 				209CCCE317E329270058CC1E /* main.m in Sources */,
-				20E98D1117A6A4440085D7CA /* PinterestPlugin.m in Sources */,
-				202E0F561802BCFD00D39496 /* GotoPlugin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,7 +527,7 @@
 		2010FD031797138B0092C107 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -610,6 +538,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Classes/BijouxAccessoiresDIY-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
+					"“$(BUILT_PRODUCTS_DIR)”",
+					"“$(OBJROOT)/UninstalledProducts/include”",
+					"“$(TARGET_BUILD_DIR)/usr/local/lib/include”",
+				);
+				"HEADER_SEARCH_PATHS[arch=*]" = (
 					"“$(BUILT_PRODUCTS_DIR)”",
 					"“$(OBJROOT)/UninstalledProducts/include”",
 					"“$(TARGET_BUILD_DIR)/usr/local/lib/include”",
@@ -631,7 +564,7 @@
 		2010FD041797138B0092C107 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -647,10 +580,12 @@
 					"“$(TARGET_BUILD_DIR)/usr/local/lib/include”",
 				);
 				"HEADER_SEARCH_PATHS[arch=*]" = (
-					"“$(BUILT_PRODUCTS_DIR)”",
-					"“$(OBJROOT)/UninstalledProducts/include”",
-					"“$(TARGET_BUILD_DIR)/usr/local/lib/include”",
-					"\"$(BUILD_ROOT)/../IntermediateBuildFilesPath/UninstalledProducts\"",
+					"“$(BUILT_PRODUCTS_DIR)”/**",
+					"“$(OBJROOT)/UninstalledProducts/include”/**",
+					"“$(TARGET_BUILD_DIR)/usr/local/lib/include”/**",
+					"\"$(BUILD_ROOT)/../IntermediateBuildFilesPath/UninstalledProducts\"/**",
+					"\"$(TARGET_BUILD_DIR)\"/**",
+					"“$(BUILT_PRODUCTS_DIR)”/**",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Classes/BijouxAccessoiresDIY-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
@@ -661,7 +596,8 @@
 				PRODUCT_NAME = BijouxAccessoiresDIY;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 2;
-				USER_HEADER_SEARCH_PATHS = "\"$(PROJECT_TEMP_DIR)/../UninstalledProducts/include\"/** \"$(BUILD_ROOT)/../IntermediateBuildFilesPath/UninstalledProducts\"/** \"$(TARGET_BUILD_DIR)\"/**";
+				USER_HEADER_SEARCH_PATHS = "\"$(PROJECT_TEMP_DIR)/../UninstalledProducts/include\"/** \"$(BUILD_ROOT)/../IntermediateBuildFilesPath/UninstalledProducts\"/** \"$(TARGET_BUILD_DIR)\"/** \"$(CORDOVALIB)/Classes\"/**";
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = "$(PROJECT_TEMP_DIR)/../UninstalledProducts/include";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

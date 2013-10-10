@@ -6,6 +6,7 @@
 //
 
 #import "RootViewController.h"
+#import "Pinterest/Pinterest.h"
 #import <QuartzCore/QuartzCore.h>
 int current;
 
@@ -14,11 +15,12 @@ int current;
 @property (nonatomic, readwrite, strong) UITapGestureRecognizer* tapGRbottom;
 @property (nonatomic, readwrite, strong) UISwipeGestureRecognizer *swipeGRleft;
 @property (nonatomic, readwrite, strong) UISwipeGestureRecognizer *swipeGRright;
+@property (nonatomic, readwrite, strong) Pinterest* pinterest;
 @end
 
 @implementation RootViewController
 
-@synthesize masterViewController, cdvViewController, burger, triggeredtop, triggeredbottom, triggeredburger;
+@synthesize masterViewController, webView, burger, triggeredtop, triggeredbottom, triggeredburger;
 
 - (void)viewDidLoad
 {
@@ -30,24 +32,27 @@ int current;
     [self.view addSubview:self.masterViewController.tableView];
     [self.masterViewController didMoveToParentViewController:self];
     
-    // CordovaView
-    self.cdvViewController = [CDVViewController new];
+    // WebView
+    self.webView = [[UIWebView alloc] init];
     if (NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_6_1) {
-        self.cdvViewController.view.frame = CGRectMake(0, 64, 778, 960);
+        self.webView.frame = CGRectMake(0, 64, 778, 960);
     } else {
-        self.cdvViewController.view.frame = CGRectMake(0, 0, 778, 1004);
+        self.webView.frame = CGRectMake(0, 0, 778, 1004);
     }
-    self.cdvViewController.view.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleLeftMargin;
-    for (UIView *view in [[[self.cdvViewController.webView subviews] objectAtIndex:0] subviews]) {
+    self.webView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleLeftMargin;
+    for (UIView *view in [[[self.webView subviews] objectAtIndex:0] subviews]) {
         if ([view isKindOfClass:[UIImageView class]]) {
             view.hidden = YES;
         }
     }
-    for (UIView *subview in self.cdvViewController.webView.subviews) {
+    for (UIView *subview in self.webView.subviews) {
         subview.clipsToBounds = NO;
     }
-    self.cdvViewController.webView.scrollView.delegate = self;
-    [self.view addSubview:self.cdvViewController.view];
+    self.webView.scrollView.delegate = self;
+    self.webView.delegate = self;
+    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"index" ofType:@"html" inDirectory:@"www"]];
+    [webView loadRequest:[NSURLRequest requestWithURL:url]];
+    [self.view addSubview:self.webView];
 
     // Top pull view
     self.pullviewtop = [[UIView alloc] initWithFrame:CGRectMake(0, -160, 768, 80)];
@@ -67,10 +72,10 @@ int current;
     self.chapternametop.font = [UIFont boldSystemFontOfSize:14];
     self.chapternametop.backgroundColor = [UIColor clearColor];
     [self.pullviewtop addSubview:self.chapternametop];
-    [self.cdvViewController.webView addSubview:self.pullviewtop];
+    [self.webView addSubview:self.pullviewtop];
     
     // Bottom pull view
-    self.pullviewbottom = [[UIView alloc] initWithFrame:CGRectMake(0, self.cdvViewController.webView.scrollView.frame.size.height + 80, 768, 80)];
+    self.pullviewbottom = [[UIView alloc] initWithFrame:CGRectMake(0, self.webView.scrollView.frame.size.height + 80, 768, 80)];
     self.pullviewbottom.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
     self.pullviewbottom.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.75];
     UIImageView* tapimgviewbottom = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tap.png"]];
@@ -88,7 +93,7 @@ int current;
     self.chapternamebottom.font = [UIFont boldSystemFontOfSize:14];
     self.chapternamebottom.backgroundColor = [UIColor clearColor];
     [self.pullviewbottom addSubview:self.chapternamebottom];
-    [self.cdvViewController.webView addSubview:self.pullviewbottom];
+    [self.webView addSubview:self.pullviewbottom];
     
     // Burger
     [self.burger setEnabled:UIInterfaceOrientationIsPortrait([[UIApplication sharedApplication] statusBarOrientation])];
@@ -97,8 +102,8 @@ int current;
     UIView *separatorview = [[UIView alloc] init];
     separatorview.frame = CGRectMake(-1, 0, 1, 960);
     separatorview.backgroundColor = [UIColor colorWithRed:.56 green:.56 blue:.58 alpha:1];
-    [self.cdvViewController.webView addSubview:separatorview];
-    [self.cdvViewController.webView bringSubviewToFront:separatorview];
+    [self.webView addSubview:separatorview];
+    [self.webView bringSubviewToFront:separatorview];
     
     self.tapGRtop = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapOnPullView:)];
     self.tapGRtop.delegate = self;
@@ -199,19 +204,19 @@ int current;
             CGRect fr = self.pullviewtop.frame;
             fr.origin.y = -160;
             self.pullviewtop.frame = fr;
-            [self.cdvViewController.webView.scrollView setContentOffset:CGPointMake(0, 0) animated:YES];
+            [self.webView.scrollView setContentOffset:CGPointMake(0, 0) animated:YES];
         }
         
         if (self.triggeredbottom) {
             self.triggeredbottom = NO;
             CGRect fr = self.pullviewbottom.frame;
-            fr.origin.y = self.cdvViewController.webView.scrollView.frame.size.height + 80;
+            fr.origin.y = self.webView.scrollView.frame.size.height + 80;
             self.pullviewbottom.frame = fr;
-            [self.cdvViewController.webView.scrollView setContentOffset:CGPointMake(0, self.cdvViewController.webView.scrollView.contentOffset.y-80) animated:YES];
+            [self.webView.scrollView setContentOffset:CGPointMake(0, self.webView.scrollView.contentOffset.y-80) animated:YES];
         }
         
     } completion:^(BOOL finished){
-        [self.cdvViewController.webView stringByEvaluatingJavaScriptFromString:call];
+        [self.webView stringByEvaluatingJavaScriptFromString:call];
         if (next > 0) self.chapternametop.text = [chapters objectAtIndex:next-1];
         if (next < [chapters count]-1) self.chapternamebottom.text = [chapters objectAtIndex:next+1];
         NSIndexPath *ip=[NSIndexPath indexPathForRow:next inSection:0];
@@ -223,24 +228,24 @@ int current;
 - (void)showMenu
 {
     [UIView animateWithDuration:0.35 animations:^{
-        CGRect fr2 = self.cdvViewController.view.frame;
+        CGRect fr2 = self.webView.frame;
         fr2.origin.x = 256;
-        self.cdvViewController.view.frame = fr2;
-        self.cdvViewController.webView.scrollView.userInteractionEnabled = NO;
+        self.webView.frame = fr2;
+        self.webView.scrollView.userInteractionEnabled = NO;
         self.triggeredburger = YES;
         if (self.triggeredtop) {
             self.triggeredtop = NO;
             CGRect fr3 = self.pullviewtop.frame;
             fr3.origin.y = -160;
             self.pullviewtop.frame = fr3;
-            [self.cdvViewController.webView.scrollView setContentOffset:CGPointMake(0, 0) animated:YES];
+            [self.webView.scrollView setContentOffset:CGPointMake(0, 0) animated:YES];
         }
         if (self.triggeredbottom) {
             self.triggeredbottom = NO;
             CGRect fr3 = self.pullviewbottom.frame;
-            fr3.origin.y = self.cdvViewController.webView.scrollView.frame.size.height + 80;
+            fr3.origin.y = self.webView.scrollView.frame.size.height + 80;
             self.pullviewbottom.frame = fr3;
-            [self.cdvViewController.webView.scrollView setContentOffset:CGPointMake(0, self.cdvViewController.webView.scrollView.contentOffset.y-80) animated:YES];
+            [self.webView.scrollView setContentOffset:CGPointMake(0, self.webView.scrollView.contentOffset.y-80) animated:YES];
         }
     }];
 }
@@ -248,10 +253,10 @@ int current;
 - (void)hideMenu
 {
     [UIView animateWithDuration:0.35 animations:^{
-        CGRect fr2 = self.cdvViewController.view.frame;
+        CGRect fr2 = self.webView.frame;
         fr2.origin.x = 0;
-        self.cdvViewController.view.frame = fr2;
-        self.cdvViewController.webView.scrollView.userInteractionEnabled = YES;
+        self.webView.frame = fr2;
+        self.webView.scrollView.userInteractionEnabled = YES;
         self.triggeredburger = NO;
     }];
 }
@@ -284,10 +289,10 @@ int current;
         toOrientation == UIInterfaceOrientationLandscapeRight) {
         [self.burger setEnabled:NO];
         if (self.triggeredburger) {
-            self.cdvViewController.view.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleRightMargin;
-            self.cdvViewController.webView.scrollView.userInteractionEnabled = YES;
+            self.webView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleRightMargin;
+            self.webView.scrollView.userInteractionEnabled = YES;
         } else {
-            self.cdvViewController.view.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleLeftMargin;
+            self.webView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleLeftMargin;
         }
     }
     
@@ -301,7 +306,7 @@ int current;
         if (self.triggeredbottom) {
             self.triggeredbottom = NO;
             CGRect fr3 = self.pullviewbottom.frame;
-            fr3.origin.y = self.cdvViewController.webView.scrollView.frame.size.height + 80;
+            fr3.origin.y = self.webView.scrollView.frame.size.height + 80;
             self.pullviewbottom.frame = fr3;
         }
     }];
@@ -311,11 +316,61 @@ int current;
     if (fromInterfaceOrientation == UIInterfaceOrientationPortrait ||
         fromInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown) {
         if (self.triggeredburger) {
-            self.cdvViewController.view.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleLeftMargin;
-            self.cdvViewController.webView.scrollView.userInteractionEnabled = YES;
+            self.webView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleLeftMargin;
+            self.webView.scrollView.userInteractionEnabled = YES;
             self.triggeredburger = NO;
         }
     }
+}
+
+- (BOOL)webView:(UIWebView *)webView2 shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+
+    if ([[[request URL] absoluteString] hasPrefix:@"js-call"]) {
+
+        NSArray *components = [[[request URL] absoluteString] componentsSeparatedByString:@":::"];
+        NSString *function = [components objectAtIndex:1];
+
+        [self performSelector:NSSelectorFromString([function stringByAppendingString:@":"]) withObject:components];
+
+        return NO;
+    }
+
+    return YES;
+}
+
+- (void)goTo:(NSArray *)components {
+    NSInteger next = [[components objectAtIndex:2] integerValue];
+    
+    NSString* call = [NSString stringWithFormat:@"loadpage(%i, %i)", next, 0];
+    
+    [self.webView stringByEvaluatingJavaScriptFromString:call];
+
+    if (next > 0) self.chapternametop.text = [chapters objectAtIndex:next-1];
+    if (next < [chapters count]-1) self.chapternamebottom.text = [chapters objectAtIndex:next+1];
+    NSIndexPath *ip=[NSIndexPath indexPathForRow:next inSection:0];
+    [self.masterViewController.tableView selectRowAtIndexPath:ip animated:YES scrollPosition:UITableViewScrollPositionNone];
+    
+    current = next;
+}
+
+- (void) share:(NSArray *)components {;
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:[components objectAtIndex:2] ofType:@"pdf" inDirectory:@"www/assets/pdf"];
+    NSData *pdf = [NSData dataWithContentsOfFile:path];
+    
+    NSArray *activityItems = @[pdf];
+    
+    UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
+    
+    [self presentViewController:activityController animated:YES completion:nil];
+}
+
+- (void) composePin:(NSArray *)components {
+    NSString* clientID = [@"1432309" retain];
+    self.pinterest = [[Pinterest alloc] initWithClientId:clientID];
+    [self.pinterest createPinWithImageURL:[NSURL URLWithString:[components objectAtIndex:2]]
+                                sourceURL:[NSURL URLWithString:@"http://www.citronours.fr"]
+                              description:@"J'ai trouvé cette image dans un livre de citronours.fr"];
 }
 
 @end

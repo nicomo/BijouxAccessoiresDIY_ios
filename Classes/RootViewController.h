@@ -7,11 +7,12 @@
 
 #import <UIKit/UIKit.h>
 #import "MasterViewController.h"
-#import "Cordova/CDVViewController.h"
+//#import "Cordova/CDVViewController.h"
 
 @interface RootViewController : UIViewController
 @property (nonatomic, strong) MasterViewController* masterViewController;
-@property (nonatomic, strong) CDVViewController* cdvViewController;
+//@property (nonatomic, strong) CDVViewController* cdvViewController;
+@property (nonatomic, strong) UIWebView* webView;
 @property (nonatomic, strong) IBOutlet UIBarButtonItem* burger;
 @property (nonatomic, strong) UIView* pullviewtop;
 @property (nonatomic, strong) UIView* pullviewbottom;
