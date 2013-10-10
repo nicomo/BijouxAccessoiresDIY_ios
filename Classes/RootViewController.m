@@ -339,6 +339,10 @@ int current;
         [[UIApplication sharedApplication] openURL:[request URL]];
         return NO;
     }
+    
+    if (navigationType == UIWebViewNavigationTypeFormSubmitted || navigationType == UIWebViewNavigationTypeFormSubmitted) {
+        return ![[UIApplication sharedApplication] openURL:[request URL]];
+    }
 
     return YES;
 }
